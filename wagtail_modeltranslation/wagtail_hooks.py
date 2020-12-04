@@ -22,14 +22,14 @@ from .patch_wagtailadmin_forms import PatchedCopyForm
 try:
     from wagtail.core import hooks
     from wagtail.core.models import Page
-    from wagtail.core.rich_text.pages import PageLinkHandler
+    from wagtail.admin.rich_text.converters.editor_html import PageLinkHandler
     from wagtail.core import __version__ as WAGTAIL_VERSION
     from wagtail.admin import messages
     from wagtail.admin.views.pages import get_valid_next_url_from_request
 except ImportError:
     from wagtail.core import hooks
     from wagtail.core.models import Page
-    from wagtail.core.rich_text import PageLinkHandler
+    from wagtail.admin.rich_text.converters.editor_html import PageLinkHandler
     from wagtail.core import __version__ as WAGTAIL_VERSION
     from wagtail.wagtailadmin import messages
     from wagtail.wagtailadmin.views.pages import get_valid_next_url_from_request
