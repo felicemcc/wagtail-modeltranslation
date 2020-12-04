@@ -35,7 +35,7 @@ def runtests():
         import wagtail
         if VERSION < (2,):
             WAGTAIL_MODULES = [
-                'wagtail.wagtailcore',
+                'wagtail.core',
                 'wagtail.wagtailadmin',
                 'wagtail.wagtaildocs',
                 'wagtail.wagtailsnippets',
@@ -49,7 +49,7 @@ def runtests():
                 'wagtail.contrib.settings',
                 'wagtail.contrib.wagtailapi',
             ]
-            WAGTAIL_CORE = 'wagtail.wagtailcore'
+            WAGTAIL_CORE = 'wagtail.core'
         else:
             WAGTAIL_MODULES = [
                 'wagtail.core',

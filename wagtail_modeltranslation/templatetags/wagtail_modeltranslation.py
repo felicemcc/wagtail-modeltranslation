@@ -22,8 +22,8 @@ try:
     from wagtail.core.models import Page
     from wagtail.core.templatetags.wagtailcore_tags import pageurl
 except ImportError:
-    from wagtail.wagtailcore.models import Page
-    from wagtail.wagtailcore.templatetags.wagtailcore_tags import pageurl
+    from wagtail.core.models import Page
+    from wagtail.core.templatetags.wagtailcore_tags import pageurl
 
 
 register = template.Library()

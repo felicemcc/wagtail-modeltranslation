@@ -6,7 +6,7 @@ from wagtail_modeltranslation import settings
 try:
     from wagtail.core.models import Page
 except ImportError:
-    from wagtail.wagtailcore.models import Page
+    from wagtail.core.models import Page
 
 
 @register(Page)

@@ -69,7 +69,7 @@ class WagtailModeltranslationTransactionTestBase(TransactionTestCase):
                     sys.modules.pop('wagtail.core.models', None)
                 except ImportError:
                     from wagtail.wagtailadmin import edit_handlers
-                    sys.modules.pop('wagtail.wagtailcore.models', None)
+                    sys.modules.pop('wagtail.core.models', None)
                 imp.reload(wag_translation)
                 imp.reload(edit_handlers)  # so Page can be repatched by edit_handlers
                 wagtailcore_args = []
@@ -147,7 +147,7 @@ class WagtailModeltranslationTest(WagtailModeltranslationTestBase):
         try:
             from wagtail.core.models import Page
         except ImportError:
-            from wagtail.wagtailcore.models import Page
+            from wagtail.core.models import Page
         Page.objects.delete()
 
     def test_page_fields(self):
@@ -246,7 +246,7 @@ class WagtailModeltranslationTest(WagtailModeltranslationTestBase):
         try:
             from wagtail.core.blocks import CharBlock
         except ImportError:
-            from wagtail.wagtailcore.blocks import CharBlock
+            from wagtail.core.blocks import CharBlock
         self.assertEquals(child_block[0][0], 'text')
         self.assertIsInstance(child_block[0][1], CharBlock)
 
@@ -401,7 +401,7 @@ class WagtailModeltranslationTest(WagtailModeltranslationTestBase):
         try:
             from wagtail.core.models import Site
         except ImportError:
-            from wagtail.wagtailcore.models import Site
+            from wagtail.core.models import Site
         # Create a test Site with a root page
         root = models.TestRootPage(title='title', depth=1, path='0001', slug_en='slug_en', slug_de='slug_de')
         root.save()
@@ -467,7 +467,7 @@ class WagtailModeltranslationTest(WagtailModeltranslationTestBase):
         try:
             from wagtail.core.models import Site
         except ImportError:
-            from wagtail.wagtailcore.models import Site
+            from wagtail.core.models import Site
         # Create a test Site with a root page
         root = models.TestRootPage(title='title slugurl', depth=1, path='0004',
                                    slug_en='title_slugurl_en', slug_de='title_slugurl_de')
@@ -545,7 +545,7 @@ class WagtailModeltranslationTest(WagtailModeltranslationTestBase):
         try:
             from wagtail.core.models import Site
         except ImportError:
-            from wagtail.wagtailcore.models import Site
+            from wagtail.core.models import Site
         # Create a test Site with a root page
         root = models.TestRootPage.objects.create(title='url paths', depth=1, path='0006', slug='url-path-slug')
 

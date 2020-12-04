@@ -36,10 +36,10 @@ except ImportError:
     from wagtail.wagtailadmin.edit_handlers import FieldPanel, \
         MultiFieldPanel, FieldRowPanel, InlinePanel, StreamFieldPanel, RichTextFieldPanel,\
         extract_panel_definitions_from_model_class, ObjectList
-    from wagtail.wagtailcore.models import Page, Site
-    from wagtail.wagtailcore.fields import StreamField, StreamValue
-    from wagtail.wagtailcore.url_routing import RouteResult
-    from wagtail.wagtailcore.utils import WAGTAIL_APPEND_SLASH
+    from wagtail.core.models import Page, Site
+    from wagtail.core.fields import StreamField, StreamValue
+    from wagtail.core.url_routing import RouteResult
+    from wagtail.core.utils import WAGTAIL_APPEND_SLASH
     from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
     from wagtail.wagtailsearch.index import SearchField
     from wagtail.wagtailsnippets.views.snippets import SNIPPET_EDIT_HANDLERS

@@ -5,7 +5,7 @@ from django.views.i18n import set_language
 try:
     from wagtail.core import urls as wagtail_urls
 except ImportError:
-    from wagtail.wagtailcore import urls as wagtail_urls
+    from wagtail.core import urls as wagtail_urls
 
 urlpatterns = [
     url(r'^set_language/$', set_language, {},

@@ -35,7 +35,7 @@ class PageFactory(object):
         try:
             from wagtail.core.models import Site
         except ImportError:
-            from wagtail.wagtailcore.models import Site
+            from wagtail.core.models import Site
 
         # add a top root node to mimic Wagtail's real behaviour
         all_nodes = {

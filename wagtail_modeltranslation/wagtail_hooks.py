@@ -27,10 +27,10 @@ try:
     from wagtail.admin import messages
     from wagtail.admin.views.pages import get_valid_next_url_from_request
 except ImportError:
-    from wagtail.wagtailcore import hooks
-    from wagtail.wagtailcore.models import Page
-    from wagtail.wagtailcore.rich_text import PageLinkHandler
-    from wagtail.wagtailcore import __version__ as WAGTAIL_VERSION
+    from wagtail.core import hooks
+    from wagtail.core.models import Page
+    from wagtail.core.rich_text import PageLinkHandler
+    from wagtail.core import __version__ as WAGTAIL_VERSION
     from wagtail.wagtailadmin import messages
     from wagtail.wagtailadmin.views.pages import get_valid_next_url_from_request
 

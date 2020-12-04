@@ -3,7 +3,7 @@ from modeltranslation.translator import translator
 try:
     from wagtail.core.models import Page
 except ImportError:
-    from wagtail.wagtailcore.models import Page
+    from wagtail.core.models import Page
 
 
 old_get_registered_models = translator.get_registered_models

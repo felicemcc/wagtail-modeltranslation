@@ -15,9 +15,9 @@ except ImportError:
     from wagtail.contrib.wagtailroutablepage.models import RoutablePageMixin, route
     from wagtail.wagtailadmin.edit_handlers import FieldPanel, MultiFieldPanel, FieldRowPanel, InlinePanel, \
         StreamFieldPanel
-    from wagtail.wagtailcore import blocks
-    from wagtail.wagtailcore.fields import StreamField
-    from wagtail.wagtailcore.models import Page as WagtailPage
+    from wagtail.core import blocks
+    from wagtail.core.fields import StreamField
+    from wagtail.core.models import Page as WagtailPage
     from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
     from wagtail.wagtailsearch import index
     from wagtail.wagtailsnippets.models import register_snippet

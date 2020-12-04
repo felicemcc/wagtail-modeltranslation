@@ -7,7 +7,7 @@ from wagtail_modeltranslation.contextlib import use_language
 try:
     from wagtail.core.models import Page
 except ImportError:
-    from wagtail.wagtailcore.models import Page
+    from wagtail.core.models import Page
 
 
 class Command(BaseCommand):
